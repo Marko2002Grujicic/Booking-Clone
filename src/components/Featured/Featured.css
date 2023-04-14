@@ -1,0 +1,38 @@
+.exploreSerbiaTitle {
+  font-size: 25px;
+  font-weight: 500;
+}
+.exploreSerbiaSubtitle {
+  font-size: 18px;
+  color: #6b6b6b;
+}
+.featured {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 1;
+}
+.featuredImg {
+  width: 100%;
+  object-fit: cover;
+}
+.featuredItem {
+  border-radius: 10px;
+  height: 250px;
+}
+.featuredTitles {
+  color: black;
+}
+@media (max-width: 768px) {
+  .featured {
+    flex-direction: column;
+  }
+  .featuredImg {
+    height: 200px;
+  }
+  .featuredItem {
+    height: auto;
+  }
+}

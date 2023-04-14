@@ -1,0 +1,151 @@
+.header {
+  background-color: #003580;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-width: none;
+}
+.headerContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px 0 100px 0px;
+}
+.headerContainer.listMode {
+  margin: 20px 0px 0px 0px;
+}
+.headerList {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.headerListItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.headerListItem.active {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px;
+}
+.headerTitle {
+  font-size: 50px;
+}
+.headerDesc {
+  margin: 20px 0px;
+  font-size: 25px;
+}
+.headerBtn {
+  background-color: #0071c2;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.headerSearch {
+  height: 60px;
+  background-color: white;
+  border: 3px solid #febb02;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  max-width: 1200px;
+  color: black;
+  font-size: 20px;
+}
+.headerIcon {
+  color: lightgray;
+}
+.headerSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.headerSearchInput {
+  border: none;
+  outline: none;
+}
+.headerSearchText {
+  color: lightgray;
+  cursor: pointer;
+}
+.datePicker {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+}
+
+.options {
+  position: absolute;
+  top: 70px;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.optionItem {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.optionsCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
+}
+.optionCounterBtn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+
+.optionCounterBtn:disabled {
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .headerList {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .headerListItem {
+    margin-left: 20px;
+    width: fit-content;
+  }
+  .headerTitle {
+    font-size: 30px;
+  }
+  .headerDesc {
+    margin: 20px 0px;
+    font-size: 20px;
+  }
+  .headerSearchText {
+    font-size: 10px;
+  }
+  .datePicker {
+    left: 40px;
+  }
+  .options {
+    left: 40px;
+  }
+  .rdrCalendarWrapper {
+    font-size: 10px;
+  }
+}
