@@ -1,9 +1,10 @@
 .navbar {
-  height: 5vh;
+  height: 10vh;
   background-color: #003580;
   color: white;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 .navContainer {

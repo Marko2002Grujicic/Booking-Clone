@@ -1,0 +1,14 @@
+#content {
+  padding-top: 10vh;
+}
+.priceTag {
+  font-weight: 500;
+  color: black;
+}
+.rating button {
+  border: none;
+  padding: 5px;
+  color: white;
+  background-color: #003580;
+  text-align: center;
+}

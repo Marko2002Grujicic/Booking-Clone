@@ -6,6 +6,7 @@
   position: relative;
   width: 100%;
   min-width: none;
+  padding-top: 5vh;
 }
 .headerContainer {
   width: 100%;
@@ -14,21 +15,6 @@
 }
 .headerContainer.listMode {
   margin: 20px 0px 0px 0px;
-}
-.headerList {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 50px;
-}
-.headerListItem {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.headerListItem.active {
-  border: 1px solid white;
-  border-radius: 20px;
-  padding: 10px;
 }
 .headerTitle {
   font-size: 50px;
@@ -73,9 +59,10 @@
 .headerSearchInput {
   border: none;
   outline: none;
+  font-size: 20px;
 }
 .headerSearchText {
-  color: lightgray;
+  color: black;
   cursor: pointer;
 }
 .datePicker {
@@ -119,7 +106,11 @@
 .optionCounterBtn:disabled {
   cursor: not-allowed;
 }
-
+@media (max-width: 1024px) {
+  .options {
+    right: 30px;
+  }
+}
 @media (max-width: 768px) {
   .headerList {
     flex-direction: column;
@@ -143,9 +134,52 @@
     left: 40px;
   }
   .options {
-    left: 40px;
+    right: 0px;
   }
   .rdrCalendarWrapper {
     font-size: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .headerBtn {
+    width: 60px;
+    padding: 5px;
+  }
+  .headerSearchItem {
+    width: 40%;
+  }
+  .headerSearchText {
+    font-size: 10;
+  }
+  .datePicker {
+    left: 0px;
+  }
+  .rdrCalendarWrapper,
+  .rdrDateRangeWrapper,
+  .datePicker {
+    width: 100%;
+    border: 1px solid black;
+  }
+  .options {
+    left: 0px;
+  }
+  .optionItem {
+    width: 350px;
+    margin: 10px;
+  }
+  .optionsCounter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
+  }
+  .optionCounterBtn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #0071c2;
+    color: #0071c2;
+    cursor: pointer;
+    background-color: white;
   }
 }

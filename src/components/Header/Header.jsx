@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './Header.css'
-import {FaBed, FaPlane, FaCar, FaTaxi, FaCalendar} from 'react-icons/fa'
-import {MdAttractions} from 'react-icons/md'
+import { FaCalendar} from 'react-icons/fa'
 import {IoIosBed} from 'react-icons/io'
 import {BsFillPersonFill} from 'react-icons/bs'
 import { DateRange } from 'react-date-range'
@@ -34,28 +33,6 @@ const Header = ({type}) => {
   return (
     <div className='header'>
         <div className={type === 'list' ? 'headerContainer listMode' : 'headerContainer'}>
-         <div className='headerList'>
-           <div className="headerListItem active">
-            <FaBed/>
-            <span>Stays</span>
-            </div> 
-            <div className="headerListItem">
-            <FaPlane/>
-            <span>Flights</span>
-            </div>
-            <div className="headerListItem">
-            <FaCar/>
-            <span>Car Rentals</span>
-            </div> 
-            <div className="headerListItem">
-            <MdAttractions/>
-            <span>Attractions</span>
-            </div>  
-            <div className="headerListItem">
-            <FaTaxi/>
-            <span>Airport Taxis</span>
-            </div> 
-         </div>
             { type !== 'list' &&
                 <>
                 <h1 className='headerTitle'>Find your next stay</h1>
@@ -69,7 +46,7 @@ const Header = ({type}) => {
                 </div>
                 <div className="headerSearchItem">
                 <FaCalendar className='headerIcon'/>
-                <span onClick={() => setOpenDate(!openDate)} className='headerSearchText'>{`${format(date[0].startDate, 'dd/MM/yyyy')} to ${format(date[0].endDate, 'dd/MM/yyyy')} `}</span>
+                <span onClick={() => setOpenDate(!openDate)} className='headerSearchText'>{`${format(date[0].startDate, 'dd/MM/yyyy')} - ${format(date[0].endDate, 'dd/MM/yyyy')} `}</span>
                 {openDate && <DateRange
                 editableDateInputs={true}
                 onChange={item => setDate([item.selection])}

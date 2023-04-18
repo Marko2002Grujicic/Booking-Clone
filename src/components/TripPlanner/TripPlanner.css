@@ -1,0 +1,35 @@
+.tripPlanner-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+  padding-top: 5vh;
+}
+.list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  max-width: 400px;
+}
+.category {
+  color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  min-width: 115px;
+  cursor: pointer;
+}
+.icon {
+  font-size: 20px;
+}
+.active {
+  color: #6699ff;
+  background-color: #f0f7fb;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #6699ff;
+}
